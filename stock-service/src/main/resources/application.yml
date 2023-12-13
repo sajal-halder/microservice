@@ -1,0 +1,24 @@
+spring.threads.virtual.enabled: true
+server.port: 8081
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/micro-service
+    username: postgres
+    password: sajal1230
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+queue:
+  billed-order: BILLED_ORDER_EVENT
+  order-done: ORDER_DONE_EVENT
+topic:
+  order-canceled: ORDER_CANCELED_TOPIC
